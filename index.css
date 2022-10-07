@@ -1,55 +1,108 @@
-.accordian_body {
-  max-width: 600px;
-  margin: 0em auto;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #fffdfb;
+}
+
+h1 {
+  margin: 0 auto;
+}
+.accordion {
+  width: 50%;
+  margin: 200px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2.8em 0em;
+  gap: 30px;
 }
 
-.faq {
-  width: 100%;
+.item {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  display: grid;
   background-color: #4caf50;
-  border-radius: 8px;
-  margin: 0em 0em 1.4em;
-  padding: 0.7em 1.4em;
-}
-
-.faq .faq_header {
-  display: flex;
-  justify-content: space-between;
+  color: #000;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
   align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.faq h3 {
-  font-size: 1.2em;
-  font-weight: bolder;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 0em;
-  padding: 0em;
+h2 {
+  font-size: 20px;
 }
 
-.faq p {
-  font-size: 1em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 1em 0em 0em;
-  padding: 0em;
+.number {
+  font-size: 32px;
 }
 
-.faq .show_btn {
+.icon {
   width: 24px;
   height: 24px;
-  background-color: black;
-  outline: none;
-  box-shadow: none;
-  border: none;
-  color: white;
-  margin: 0em;
-  border-radius: 120px;
-  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  background-color: #000;
+  border-radius: 50%;
 }
 
-.hidden {
+.hidden-box {
+  grid-column: 2/3;
   display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+}
+
+.hidden-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hidden-box ul li {
+  margin-left: 16px;
+  line-height: 1.5;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  border-top: 3px solid #1864ab;
+  animation: borderline 1s linear forwards;
+}
+
+@keyframes borderline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.active .hidden-box {
+  display: block;
 }

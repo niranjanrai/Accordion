@@ -1,28 +1,21 @@
-const faqData = [
-  {
-    id: 1,
-    question: "Who are we?",
-    answer:
-      "We enable upscaling careers through flexible, interactive and collaborative learning. We believe in building learning communities by bringing together mentors, young minds, and creators.",
-  },
-  {
-    id: 2,
-    question: "What do we do?",
-    answer:
-      "Building learning communities with Our Affordable & Competent Courses",
-  },
-  {
-    id: 3,
-    question: "Are the community classes boring?",
-    answer: "No, not at all!!!",
-  },
-];
+const ourItemDiv = document.getElementsByClassName("item");
+const openIcon = document.getElementsByClassName("iconOpen");
+const closeIcon = document.getElementsByClassName("iconClose");
 
-// const accordianBody;
-const faqs = [];
+// console.log(ourItemDiv);
 
-function showFaq() {}
+for (let i = 0; i < ourItemDiv.length; i++) {
+  closeIcon[i].style.display = "none";
 
-function createFaq() {}
+  ourItemDiv[i].addEventListener("click", () => {
+    const result = ourItemDiv[i].classList.toggle("active");
 
-function btnStatusUpdate() {}
+    if (result) {
+      closeIcon[i].style.display = "block";
+      openIcon[i].style.display = "none";
+    } else {
+      closeIcon[i].style.display = "none";
+      openIcon[i].style.display = "block";
+    }
+  });
+}

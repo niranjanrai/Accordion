@@ -5,47 +5,66 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accordion</title>
-  <link rel="stylesheet" href="index.css" />
+  <title> Accordion</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="accordian_body">
+  <div class="accordion">
     <h1>Ineuron FAQ's</h1>
 
-    <div class="faq ">
-      <div class="faq_header">
-        <h3 class="">Who are we?</h3>
-        <button class="show_btn"> +</button>
+    <div class="item">
+      <h2>"Who are we?</h2>
+      <div class="iconOpen">
+        <ion-icon class="icon" name="add-outline"></ion-icon>
       </div>
-      <p class="hidden">"We enable upscaling careers through flexible, interactive and collaborative learning. We
-        believe in
-        building
-        learning communities by bringing together mentors, young minds, and creators."</p>
+      <div class="iconClose">
+        <ion-icon class="icon" name="close-outline"></ion-icon>
+      </div>
+
+      <div class="hidden-box">
+        <p>
+          We enable upscaling careers through flexible, interactive and collaborative learning. We believe in
+          building learning communities by bringing together mentors, young minds, and creators.
+        </p>
+      </div>
     </div>
 
-    <div class="faq ">
-      <div class="faq_header">
-        <h3 class="">What do we do?</h3>
-        <button class="show_btn"> +</button>
+    <div class="item">
+      <h2>What do we do?</h2>
+      <div class="iconOpen">
+        <ion-icon class="icon" name="add-outline"></ion-icon>
       </div>
-      <p class="hidden">"Building learning communities with Our Affordable & Competent Courses"</p>
+      <div class="iconClose">
+        <ion-icon class="icon" name="close-outline"></ion-icon>
+      </div>
+
+      <div class="hidden-box">
+        <p>
+          Building learning communities with Our Affordable & Competent Courses
+        </p>
+      </div>
     </div>
 
-    <div class="faq ">
-      <div class="faq_header">
-        <h3 class="">Are the community classes boring?</h3>
-        <button class="show_btn"> +</button>
+    <div class="item">
+      <h2>Are the community classes boring?</h2>
+      <div class="iconOpen">
+        <ion-icon class="icon" name="add-outline"></ion-icon>
       </div>
-      <p class="hidden">"No, not at all!!!"</p>
+      <div class="iconClose">
+        <ion-icon class="icon" name="close-outline"></ion-icon>
+      </div>
+
+      <div class="hidden-box">
+        <p>
+          No, not at all!!!
+        </p>
+      </div>
     </div>
-
-
-
-
-
   </div>
-  <script id="faq-js" src="faq.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
